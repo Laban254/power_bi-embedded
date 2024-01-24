@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+.fullscreen-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ }
+
+ .bi-embedded {
+  display: inline-block;
+  width: 90%;
+  height: 800px;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  overflow: hidden;
+}
+ 
+h1 {
+  color: blue; /* Set the text color to blue */
+  font-weight: bold; /* Make the text bold */
+  font-size: 40px; /* Adjust the font size as needed */
+  text-align: center; /* Optional: center the text */
+
+  /* Animations */
+  animation: slide-in 1s ease-in-out forwards;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* Slide-in animation */
+@keyframes slide-in {
   from {
-    transform: rotate(0deg);
+    transform: translateX(-100%); 
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: translateX(0);
+    opacity: 1;
   }
+}
+
+/* Optionally, add a hover effect */
+h1:hover {
+  color: #077017; /* Change to a brighter blue on hover */
+  text-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* Add a blue glow */
 }
